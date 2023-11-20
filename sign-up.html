@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grocery Mart</title>
+    <link rel="apple-touch-icon" sizes="76x76" href="./assets/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="./assets/favicon/site.webmanifest" />
+    <link rel="mask-icon" href="./assets/favicon/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <!-- font -->
+    <link rel="stylesheet" href="./assets/font/stylesheet.css" />
+    <!-- css -->
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <script src="../js/scripts.js"></script>
+  </head>
+  <body>
+    <main class="auth">
+      <div class="auth__intro">
+        <a href="/" class="logo d-none d-md-flex auth__intro-logo">
+          <img src="./assets/icon/logo.svg" alt="grocerymart" class="logo__img" />
+          <h2 class="logo__title">grocerymart</h2>
+        </a>
+        <img src="./assets/image/auth/intro.svg" alt="" class="auth__img" />
+        <p class="auth__intro--text">The best of luxury brand values, high quality products, and innovative services</p>
+        <button class="auth__intro-arrow d-none d-md-block js-toggle" toggle-target="#auth-content">
+          <img src="./assets/image/auth/intro-arrow.svg" alt="" />
+        </button>
+      </div>
+      <div class="auth__content hide" id="auth-content">
+        <div class="auth__content-inner">
+          <!-- logo -->
+          <a href="/" class="logo">
+            <img src="./assets/icon/logo.svg" alt="grocerymart" class="logo__img" />
+            <h2 class="logo__title">Sign | grocerymart</h2>
+          </a>
+          <h1 class="auth__heading">Sign Up</h1>
+          <p class="auth__desc">Let’s create your account and Shop like a pro and save money.</p>
+          <form action="./index-login.html" class="form auth__form">
+            <div class="form__group">
+              <div class="form__input-inner">
+                <input type="email" name="" id="" placeholder="Email" class="form__input" />
+                <img src="./assets/icon/massage.svg" alt="" class="form__input--icon" />
+              </div>
+            </div>
+            <div class="form__group">
+              <div class="form__input-inner">
+                <input type="password" name="" id="" placeholder="Password" class="form__input" />
+                <img src="./assets/icon/clock.svg" alt="" class="form__input--icon" />
+              </div>
+            </div>
+            <div class="form__group">
+              <div class="form__input-inner">
+                <input type="password" name="" id="" placeholder="Confirm Password" class="form__input" />
+                <img src="./assets/icon/clock.svg" alt="" class="form__input--icon" />
+              </div>
+            </div>
+            <div class="form__group form__group--inline">
+              <label class="form__checkbox">
+                <input type="checkbox" name="" id="" class="form__checkbox-input" />
+                <span class="form__checkbox-label">Set as default card</span>
+              </label>
+              <a href="#!" class="auth__link form__pull--right">Recovery Password</a>
+            </div>
+            <div class="form__group auth__btn">
+              <button class="btn btn--primary form__btn">Sign Up</button>
+              <button class="btn btn--outline form__btn">
+                <img src="./assets/icon/google.svg" alt="" class="form__btn--icon" />
+                Sign in with Gmail
+              </button>
+            </div>
+          </form>
+          <p class="auth__text">
+            You have an account yet?
+            <a href="./sign-in.html" class="auth__link">Sign In</a>
+          </p>
+        </div>
+      </div>
+    </main>
+    <script>
+      window.dispatchEvent(new Event("template-loaded"));
+    </script>
+  </body>
+</html>

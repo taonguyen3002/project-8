@@ -1,0 +1,40 @@
+@use "../abstracts";
+html {
+  --bg-body-color: #f6f6f6;
+  @include abstracts.screen(lg) {
+    --bg-header-color: #fff;
+    --boxShadow-header-color: rgba(237, 237, 246, 0.2);
+  }
+  --text-color: #1a162e;
+  --icon-color: brightness(0) saturate(100%) invert(8%) sepia(18%) saturate(2011%) hue-rotate(210deg) brightness(94%)
+    contrast(96%);
+  --bg-header-color: #eee;
+  --boxShadow-top-act-color: rgba(237, 237, 246, 0.2);
+  --bg-top-act-saparate-color: #ededf6;
+  --bg-top-act-group-color: #fff;
+  --bg-dropdown-color: #fff;
+  --boxShadow-dropdown-color: rgba(200, 200, 200, 0.4);
+  --top-menu-border-color: #d2d1d6;
+  // sidebar
+  --bg-sidebarColor: #fff;
+  --boxShadow-sidebar: rgba(200, 200, 200, 0.4);
+  // category
+  --color-cateItemTitle: #000;
+  --bg-cateItem: #eee;
+  --bg-cateItemThumb: #fff;
+  @include abstracts.screen(md) {
+    --bg-cateItem: #fff;
+  }
+  // product
+  --boxShadow-productCard: rgba(237, 237, 246, 0.2);
+  --bg-productCard: #fff;
+  // button
+  --bg-filterBtn: #fff;
+  --color-fillterBtn: #6c6c72;
+  --boxShadow-likeBtn: rgba(124, 124, 124, 0.2);
+  --bg-likeBtn: #fff;
+  // auth
+  --auth-content-bg: #fff;
+  --auth-desc-color: #9e9da8;
+  --auth-form-border-input-color: #d2d1d6;
+}

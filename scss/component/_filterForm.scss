@@ -1,0 +1,213 @@
+@use "../abstracts";
+.filter__wrap {
+  position: relative;
+}
+.filter {
+  position: absolute;
+  right: 0;
+  top: 57px;
+  z-index: 1;
+  padding: 31px 30px;
+  background: var(--bg-filterForm);
+  filter: drop-shadow(0px 40px 90px var(--filter-filterForm));
+  border-radius: 15px;
+  transition: opacity, visibility;
+  transition-duration: 0.5s;
+  @include abstracts.screen(md) {
+    padding: 20px 0;
+  }
+  @include abstracts.screen(sm) {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    inset: 0;
+    border-radius: 0;
+  }
+  &__content,
+  &__heading,
+  &__footer {
+    @include abstracts.screen(md) {
+      padding: 0 20px;
+    }
+  }
+  &__content {
+    @include abstracts.screen(xl) {
+      flex-direction: column;
+      max-height: calc(100vh - 272px);
+      overflow-y: auto;
+      overscroll-behavior: contain;
+    }
+    @include abstracts.screen(sm) {
+      max-height: calc(100vh - 172px);
+      padding-bottom: 50px;
+    }
+  }
+  &.hide {
+    opacity: 0;
+    visibility: hidden;
+  }
+  &__form {
+    margin-top: 30px;
+  }
+  &__label {
+    font-weight: 500;
+    line-height: 145.455%;
+    font-size: 2.2rem;
+  }
+  &__heading {
+    @extend .filter__label;
+  }
+  &__group {
+    margin-top: 20px;
+    &--inline {
+      gap: 30px;
+    }
+  }
+  &__slider {
+    position: relative;
+    width: 100%;
+    height: 2px;
+    background: #d2d1d6;
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      width: 22px;
+      height: 22px;
+      border: 6px solid #ffb700;
+      background: var(--bg-filterForm);
+      top: 50%;
+      translate: 0 -50%;
+      border-radius: 999px;
+    }
+    &::after {
+      left: var(--min-value);
+    }
+    &::before {
+      left: var(--max-value);
+    }
+  }
+  &__label--small {
+    font-size: 1.4rem;
+    line-height: 142.857%;
+  }
+  &__input {
+    padding: 8px 12px;
+    width: 121px;
+    border: 1px solid #d2d1d6;
+    border-radius: 8px;
+    margin-top: 10px;
+    @include abstracts.screen(lg) {
+      width: 100%;
+    }
+  }
+  &__separate {
+    width: 1px;
+    background: #eee;
+    margin: 0 30px;
+    @include abstracts.screen(xl) {
+      width: 100%;
+      height: 1px;
+      margin: 15px 0;
+    }
+  }
+  &__select {
+    align-items: center;
+    font-size: 1.4rem;
+    padding: 0 14px;
+    width: var(--width, 108px);
+    font-weight: 500;
+    line-height: 142.857%;
+    justify-content: space-between;
+    @include abstracts.screen(xl) {
+      flex: 1;
+    }
+    &-wrap {
+      height: 47px;
+      align-items: center;
+      border: 1px solid #d2d1d6;
+      border-radius: 6px;
+    }
+  }
+  &__select + &__select {
+    border-left: 1px solid #d2d1d6;
+  }
+  &__tags {
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px 20px;
+    @include abstracts.screen(lg) {
+      gap: 15px;
+    }
+    @include abstracts.screen(sm) {
+      gap: 9px;
+    }
+  }
+  &__tag {
+    background: var(--bg-filterTag);
+    color: #9e9da8;
+    height: 32px;
+    border-radius: 6px;
+    padding-left: 16px;
+    padding-right: 16px;
+    transition: color 0.2s;
+    &:hover {
+      color: var(--text-color);
+    }
+  }
+  &__find {
+    width: 334px;
+    height: 46px;
+    border-radius: 6px;
+    border: 1px solid #d2d1d6;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    @include abstracts.screen(sm) {
+      width: 100%;
+    }
+    &-input {
+      width: 100%;
+      font-size: 1.5rem;
+      font-weight: 500;
+      line-height: 146.667%;
+      &::placeholder {
+        font-size: 1.5rem;
+        font-weight: 400;
+        line-height: 146.667%;
+        color: #9e9da8;
+      }
+    }
+  }
+  &__footer {
+    margin-top: 32px;
+    justify-content: flex-end;
+    @include abstracts.screen(lg) {
+      margin-top: 20px;
+    }
+    @include abstracts.screen(sm) {
+      position: sticky;
+      bottom: 20px;
+      background: var(--bg-filterForm);
+    }
+  }
+  &__cancel,
+  &__submit {
+    padding: 0 10px;
+    height: 38px;
+    flex-grow: 1;
+  }
+  &__cancel {
+    font-size: 1.5rem;
+  }
+  &__submit {
+    font-size: 1.4rem;
+  }
+  &__arrowup {
+    width: 59.5px;
+    position: absolute;
+    top: -18px;
+    right: 14px;
+    filter: var(--filter-filterArrow);
+  }
+}
