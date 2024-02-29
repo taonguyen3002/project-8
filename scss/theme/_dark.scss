@@ -35,6 +35,13 @@ html.dark {
   --bg-productCard: #171c28;
   // footer
   --footer-bg: #171c28;
+  // filter
+  --filter-bg: #292e39;
+  --filter-form-shadow: rgba(0, 0, 0, 0.4);
+  --filter-icon-arrow-filter: brightness(0) saturate(100%) invert(17%) sepia(9%) saturate(1073%) hue-rotate(183deg)
+    brightness(96%) contrast(96%);
+  // form
+  --form-tag-bg: #171c28;
   // button
   --bg-filterBtn: #171c28;
   --color-fillterBtn: #fff;

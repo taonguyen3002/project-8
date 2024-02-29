@@ -1388,6 +1388,11 @@ html.dark {
   --boxShadow-productCard: rgba(0, 0, 0, 0.2);
   --bg-productCard: #171c28;
   --footer-bg: #171c28;
+  --filter-bg: #292e39;
+  --filter-form-shadow: rgba(0, 0, 0, 0.4);
+  --filter-icon-arrow-filter: brightness(0) saturate(100%) invert(17%) sepia(9%) saturate(1073%) hue-rotate(183deg)
+    brightness(96%) contrast(96%);
+  --form-tag-bg: #171c28;
   --bg-filterBtn: #171c28;
   --color-fillterBtn: #fff;
   --bg-likeBtn: #292e39;
@@ -2357,6 +2362,7 @@ html {
   font-size: 1.4rem;
 }
 .filter__icon-arrow {
+  filter: var(--filter-icon-arrow-filter);
   position: absolute;
   top: -20px;
   right: 24px;

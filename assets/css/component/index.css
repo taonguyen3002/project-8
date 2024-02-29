@@ -516,6 +516,7 @@
   font-size: 1.4rem;
 }
 .filter__icon-arrow {
+  filter: var(--filter-icon-arrow-filter);
   position: absolute;
   top: -20px;
   right: 24px;
