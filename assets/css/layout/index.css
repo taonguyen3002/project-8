@@ -41,6 +41,23 @@
     margin-right: auto;
   }
 }
+@media (max-width: 991.98px) {
+  .top-bar__logo {
+    gap: 10px;
+    margin-left: 40px;
+  }
+  .top-bar__logo__img {
+    width: 24px;
+  }
+  .top-bar__logo-title {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 767.98px) {
+  .top-bar__logo {
+    margin-left: 0;
+  }
+}
 
 .nav-btn {
   padding: 0 40px;
@@ -250,7 +267,7 @@
 }
 
 .footer {
-  background: #ddd;
+  background: var(--footer-bg);
   padding: 60px 0;
 }
 .footer__row {

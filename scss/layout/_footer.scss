@@ -1,6 +1,6 @@
 @use "../abstracts";
 .footer {
-  background: #ddd;
+  background: var(--footer-bg);
   padding: 60px 0;
   &__row {
     display: grid;

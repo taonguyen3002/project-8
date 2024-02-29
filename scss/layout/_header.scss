@@ -32,6 +32,21 @@
       margin-right: auto;
     }
   }
+  &__logo {
+    @include abstracts.screen(lg) {
+      gap: 10px;
+      margin-left: 40px;
+      &__img {
+        width: 24px;
+      }
+      &-title {
+        font-size: 2rem;
+      }
+    }
+    @include abstracts.screen(md) {
+      margin-left: 0;
+    }
+  }
 }
 .nav-btn {
   padding: 0 40px;

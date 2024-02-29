@@ -1,0 +1,182 @@
+@use "../abstracts";
+.product {
+  &-page {
+    display: flex;
+    flex-direction: column;
+    background: var(--product-page-bg);
+  }
+  &-container {
+    margin-top: 30px;
+    @include abstracts.screen(md) {
+      margin-top: 20px;
+    }
+  }
+}
+.product-info__container {
+  @include abstracts.screen(md) {
+    background: var(--product-info-container-bg);
+    border-radius: 20px;
+  }
+}
+.product-preview {
+  padding: 0 30px;
+  @include abstracts.screen(lg) {
+    display: flex;
+  }
+  @include abstracts.screen(md) {
+    padding: 16px;
+  }
+  &__list {
+    display: flex;
+    overflow: hidden;
+    @include abstracts.screen(lg) {
+      order: 2;
+      flex: 1;
+    }
+  }
+  &__item {
+    width: 100%;
+    padding-top: 92%;
+    position: relative;
+    flex-shrink: 0;
+  }
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+  }
+  &__thumb {
+    padding: 30px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    @include abstracts.screen(lg) {
+      flex-direction: column;
+      order: 1;
+      padding-left: 0;
+    }
+    @include abstracts.screen(md) {
+      display: none;
+    }
+  }
+  &__thumb-img {
+    width: 65px;
+    height: 65px;
+    border-radius: 8px;
+    border: 1px solid rgb(238, 238, 238, 0.3);
+    object-fit: contain;
+    opacity: 0.85;
+    transition: opacity 0.3s;
+    cursor: pointer;
+    &--current {
+      opacity: 1;
+      border-color: #ffb700 !important;
+    }
+    &:hover {
+      opacity: 1;
+      border-color: #eee;
+    }
+  }
+}
+.product-info {
+  padding: 60px;
+  background: var(--product-info-bg);
+  @include abstracts.screen(xxl) {
+    padding: 40px;
+  }
+  @include abstracts.screen(lg) {
+    margin-top: 30px;
+  }
+  @include abstracts.screen(md) {
+    border-radius: 0 0 20px 20px;
+    padding: 0 16px 16px;
+    margin-top: 0;
+  }
+  &__heading {
+    font-weight: 500;
+    font-size: 2.6rem;
+    line-height: 1.385;
+    @include abstracts.screen(md) {
+      font-weight: 700;
+      line-height: 1.75;
+      font-size: 1.8rem;
+    }
+  }
+  &__card {
+    margin-top: 22px;
+    padding: 20px;
+    border: 1px solid #b9babe;
+    border-radius: 6px;
+  }
+  &__price {
+    font-weight: 500;
+    font-size: 1.6rem;
+  }
+  &__tax {
+    background: #67b04433;
+    padding: 2px 8px;
+    color: #67b044;
+  }
+  &__total-price {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-weight: 500;
+    font-size: 2.6rem;
+    line-height: 138.462%;
+  }
+  &__like-btn {
+    width: 46px;
+    height: 46px;
+    border-radius: 6px;
+    border: 1px solid #d2d1d6;
+  }
+  &__add-btn {
+    flex: 1;
+    font-weight: 500;
+    font-size: 1.8rem;
+    margin-right: 10px;
+  }
+  &__row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  &__tag {
+    background: var(--product-info-tag-bg);
+  }
+}
+.product-props {
+  padding-left: 30px;
+  @include abstracts.screen(xxl) {
+    padding-left: 10px;
+  }
+  @include abstracts.screen(lg) {
+    padding-left: 0;
+  }
+}
+.product-prop {
+  display: flex;
+  gap: 16px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  @include abstracts.screen(md) {
+    margin-top: 16px;
+  }
+  &__icon {
+    align-self: start;
+  }
+  &__heading {
+    font-weight: 500;
+    font-size: 1.8rem;
+  }
+  &__desc {
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.43;
+    margin-top: 4px;
+  }
+}

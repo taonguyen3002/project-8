@@ -1,0 +1,24 @@
+.search-bar {
+  background: var(--search-bar-bg);
+  height: 50px;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  border-radius: 10px;
+  &__input {
+    flex: 1;
+    font-weight: 500;
+    height: 100%;
+    padding-left: 15px;
+    font-size: 1.4rem;
+    line-height: 1.428;
+    &::placeholder {
+      font-weight: 400;
+      color: #9e9da8;
+    }
+  }
+  &__icon {
+    height: 100%;
+    padding: 0 15px;
+  }
+}
