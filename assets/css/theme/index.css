@@ -96,7 +96,9 @@ html {
   --product-info-bg: #f6f6f6;
   --product-info-tag-bg: #ededf6;
   --product-info-container-bg: #fff;
+  --product-tab-item-color: #9e9da8;
   --search-bar-bg: #fff;
+  --review-card-bg: #fafafd;
 }
 @media (max-width: 991.98px) {
   html {
