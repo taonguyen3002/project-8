@@ -99,6 +99,8 @@ html {
   --product-tab-item-color: #9e9da8;
   --search-bar-bg: #fff;
   --review-card-bg: #fafafd;
+  --act-dropdown-bg: #fff;
+  --act-dropdown-shadow: #c8c8c866;
 }
 @media (max-width: 991.98px) {
   html {
@@ -120,6 +122,11 @@ html {
   html {
     --product-page-bg: #fafafd;
     --product-info-bg: #fff;
+  }
+}
+@media (max-width: 767.98px) {
+  html {
+    --review-card-bg: #fff;
   }
 }
 

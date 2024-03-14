@@ -67,4 +67,10 @@ html {
   --search-bar-bg: #fff;
   // review card
   --review-card-bg: #fafafd;
+  @include abstracts.screen(md) {
+    --review-card-bg: #fff;
+  }
+  // cart preview
+  --act-dropdown-bg: #fff;
+  --act-dropdown-shadow: #c8c8c866;
 }
