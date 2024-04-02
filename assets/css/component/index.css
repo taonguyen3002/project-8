@@ -417,6 +417,7 @@
   justify-content: center;
   height: 46px;
   padding: 0 20px;
+  white-space: nowrap;
   border-radius: 6px;
   background: #f8f8fb;
   font-size: 1.8rem;
@@ -425,6 +426,9 @@
 }
 .btn + .btn {
   margin-left: 20px;
+}
+.btn--no-margin {
+  margin: 0 !important;
 }
 .btn--text {
   color: #9e9da8;
@@ -955,10 +959,11 @@
 }
 
 .cart-preview__img-wrap {
-  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--cart-preview-img-border);
   position: relative;
   padding-top: 100%;
   margin-bottom: 14px;
+  border-radius: 10px;
 }
 .cart-preview__img {
   width: 100%;
@@ -978,6 +983,61 @@
   font-weight: 500;
   font-size: 1.5rem;
   line-height: 1.4666666667;
+}
+
+.modal__overlay, .modal {
+  position: fixed;
+  inset: 0;
+}
+
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity, visibility;
+  transition-duration: 0.2s;
+}
+.modal.show {
+  opacity: 1;
+  visibility: visible;
+}
+.modal__content {
+  position: relative;
+  max-width: min(450px, 100% - 40px);
+  border-radius: 20px;
+  z-index: 1;
+  background: var(--modal-bg);
+  box-shadow: 0 20px 60px 10px var(--modal-boxshadow);
+  padding: 30px;
+}
+.modal__text {
+  font-size: 1.8rem;
+  line-height: 1.5;
+}
+.modal__bottom {
+  margin-top: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: flex-end;
+}
+.modal__overlay {
+  background: rgba(0, 0, 0, 0.4);
+}
+.modal__delete {
+  background: red;
+  color: #fff;
+}
+@media (max-width: 767.98px) {
+  .modal__btn {
+    flex: 1;
+  }
+  .modal__bottom {
+    gap: 20px;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

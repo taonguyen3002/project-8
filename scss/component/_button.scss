@@ -36,6 +36,7 @@
   justify-content: center;
   height: 46px;
   padding: 0 20px;
+  white-space: nowrap;
   border-radius: 6px;
   background: #f8f8fb;
   font-size: 1.8rem;
@@ -43,6 +44,9 @@
   user-select: none;
   + .btn {
     margin-left: 20px;
+  }
+  &--no-margin {
+    margin: 0 !important;
   }
   &--text {
     color: #9e9da8;

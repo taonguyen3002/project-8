@@ -1,10 +1,11 @@
 @use "../abstracts";
 .cart-preview {
   &__img-wrap {
-    background: rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--cart-preview-img-border);
     position: relative;
     padding-top: 100%;
     margin-bottom: 14px;
+    border-radius: 10px;
   }
   &__img {
     width: 100%;

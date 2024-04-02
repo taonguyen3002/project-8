@@ -1,5 +1,5 @@
 html.dark {
-  --bg-body-color: #292e39;
+  --bg-body: #292e39;
   --text-color: #fff;
   --icon-color: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(347deg) brightness(105%)
     contrast(101%);
@@ -44,6 +44,14 @@ html.dark {
   --product-info-tag-bg: #292e39;
   --product-info-container-bg: #171c28;
   --search-bar-bg: #171c28;
+  --checkout-breadcrumb-bg: rgba(23, 28, 40, 1);
+  --checkout-cart-info-bg: rgba(23, 28, 40, 1);
+  --checkout-cart-info-boxshadow: rgba(23, 28, 40, 0.2);
+  --checkout-cart-item-border: rgba(41, 46, 57, 1);
+  --checkout-gift-bg: rgba(118, 68, 225, 0.1);
+  --checkout-gift-boxshadow: rgba(41, 46, 57, 1);
+  --modal-bg: #3f4552;
+  --modal-boxshadow: rgba(23, 28, 40, 0.4);
 }
 @media (max-width: 991.98px) {
   html.dark {
@@ -58,7 +66,7 @@ html.dark {
 }
 
 html {
-  --bg-body-color: #f6f6f6;
+  --bg-body: #f6f6f6;
   --text-color: #1a162e;
   --icon-color: brightness(0) saturate(100%) invert(8%) sepia(18%) saturate(2011%) hue-rotate(210deg) brightness(94%)
     contrast(96%);
@@ -101,6 +109,15 @@ html {
   --review-card-bg: #fafafd;
   --act-dropdown-bg: #fff;
   --act-dropdown-shadow: #c8c8c866;
+  --cart-preview-img-border: rgba(0, 0, 0, 0.05);
+  --checkout-breadcrumb-bg: rgba(255, 255, 255, 1);
+  --checkout-cart-info-bg: rgba(255, 255, 255, 1);
+  --checkout-cart-info-boxshadow: rgba(237, 237, 246, 0.2);
+  --checkout-cart-item-border: rgba(210, 209, 214, 1);
+  --checkout-gift-bg: rgba(118, 68, 225, 0.1);
+  --checkout-gift-boxshadow: rgba(118, 68, 225, 0.1);
+  --modal-bg: #fff;
+  --modal-boxshadow: rgba(237, 237, 246, 0.2);
 }
 @media (max-width: 991.98px) {
   html {
