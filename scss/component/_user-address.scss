@@ -1,0 +1,83 @@
+@use "../abstracts";
+.user-address {
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    @include abstracts.screen(md) {
+      flex-direction: column;
+      gap: 16px;
+    }
+  }
+  &__heading {
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: calc(26 / 18);
+  }
+  &__desc {
+    margin-top: 4px;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: calc(22 / 15);
+  }
+  &__btn {
+    gap: 10px;
+    @include abstracts.screen(md) {
+      align-self: flex-start;
+    }
+  }
+}
+.address-card {
+  display: flex;
+  margin-top: 30px;
+  gap: 16px;
+  justify-content: space-between;
+  @include abstracts.screen(md) {
+    flex-direction: column;
+  }
+  &__left {
+    display: flex;
+    gap: 16px;
+    flex: 1;
+  }
+  &__title {
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: calc(26 / 18);
+  }
+  &__desc {
+    @extend .user-address__desc;
+    width: min(520px, 90%);
+  }
+  &__list {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 30px;
+    list-style: disc inside;
+  }
+  &__item {
+    margin-left: 8px;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: calc(20 / 14);
+  }
+  &__right {
+    align-self: flex-end;
+    @include abstracts.screen(md) {
+      align-self: flex-start;
+    }
+  }
+  &__ctrl {
+    height: 100%;
+  }
+  &__btn-edit {
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    font-size: 1.8rem;
+  }
+  &__btn-icon {
+    margin-right: 10px;
+  }
+}

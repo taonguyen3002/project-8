@@ -155,12 +155,26 @@ a {
   text-decoration: none;
 }
 
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:focus,
+textarea:-webkit-autofill:active,
+input:-webkit-autofill:hover,
+input:-webkit-autofill,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active,
+input:-webkit-autofill:hover {
+  transition: background-color 1s 9999s;
+  -webkit-text-fill-color: var(--text-color);
+  caret-color: var(--text-color);
+}
+
+textarea,
 input,
 button {
   padding: 0;
   border: none;
   outline: none;
-  background: none;
+  background: transparent;
   cursor: pointer;
 }
 
