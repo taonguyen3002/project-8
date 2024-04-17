@@ -52,6 +52,9 @@ html.dark {
   --checkout-gift-boxshadow: rgba(41, 46, 57, 1);
   --modal-bg: #3f4552;
   --modal-boxshadow: rgba(23, 28, 40, 0.4);
+  --profile-sidebar-bg: #171c28;
+  --profile-sidebar-boxshadow: rgba(23, 28, 40, 0.2);
+  --account-info-bg: #b9babe;
 }
 @media (max-width: 991.98px) {
   html.dark {
@@ -118,6 +121,9 @@ html {
   --checkout-gift-boxshadow: rgba(118, 68, 225, 0.1);
   --modal-bg: #fff;
   --modal-boxshadow: rgba(237, 237, 246, 0.2);
+  --profile-sidebar-bg: #fff;
+  --profile-sidebar-boxshadow: rgba(237, 237, 246, 0.2);
+  --account-info-bg: #f6f6f6;
 }
 @media (max-width: 991.98px) {
   html {

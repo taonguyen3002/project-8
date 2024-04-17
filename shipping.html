@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shipping | Grocery Mart</title>
+    <title>Favourite List | Grocery Mart</title>
     <link rel="apple-touch-icon" sizes="76x76" href="./assets/favicon/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png" />
@@ -59,7 +59,7 @@
             <div class="col-8 col-xl-12">
               <div class="cart-info">
                 <h1 class="cart-info__heading">1. Shipping, arrives between Mon, May 16—Tue, May 24</h1>
-                <div class="cart-info__separate"></div>
+                <div class="separate"></div>
                 <!-- checkout address -->
                 <div class="user-address">
                   <div class="user-address__top">
@@ -101,8 +101,8 @@
                       </div>
                       <div class="address-card__right">
                         <div class="address-card__ctrl">
-                          <button class="address-card__btn-edit">
-                            <img src="./assets/icon/edit.svg" alt="" class="address-card__btn-icon" />Edit
+                          <button class="cart-info__btn-edit">
+                            <img src="./assets/icon/edit.svg" alt="" class="cart-info__btn-icon" />Edit
                           </button>
                         </div>
                       </div>
@@ -133,15 +133,15 @@
                       </div>
                       <div class="address-card__right">
                         <div class="address-card__ctrl">
-                          <button class="address-card__btn-edit">
-                            <img src="./assets/icon/edit.svg" alt="" class="address-card__btn-icon" />Edit
+                          <button class="cart-info__edit-btn">
+                            <img src="./assets/icon/edit.svg" alt="" class="cart-info__btn-icon" />Edit
                           </button>
                         </div>
                       </div>
                     </article>
                   </div>
                 </div>
-                <div class="cart-info__separate"></div>
+                <div class="separate"></div>
                 <h2 class="cart-info__sub-heading">Items details</h2>
                 <div class="cart-info__list">
                   <!-- item 1 -->
@@ -278,7 +278,7 @@
                         <span>Shipping:</span>
                         <span>$10.00</span>
                       </div>
-                      <div class="cart-info__separate"></div>
+                      <div class="separate"></div>
                       <div class="cart-info__row cart-info__row-total">
                         <span>Total:</span>
                         <span>$201.65</span>
@@ -302,12 +302,12 @@
                   <span>Shipping</span>
                   <span>$10.00</span>
                 </div>
-                <div class="cart-info__separate"></div>
+                <div class="separate"></div>
                 <div class="cart-info__row">
                   <span>Estimated Total</span>
                   <span>$201.65</span>
                 </div>
-                <a href="#!" class="btn btn--primary btn--rounded cart-info__btn">Continue to checkout</a>
+                <a href="./payment.html" class="btn btn--primary btn--rounded cart-info__btn">Continue to checkout</a>
               </div>
               <div class="cart-info">
                 <div class="gift-item">
@@ -402,7 +402,7 @@
                     placeholder="City/District/Town"
                     class="form__input js-toggle"
                     toggle-target="#select-dialog"
-                    required
+                    readonly
                   />
                   <img src="./assets/icon/errorWarning.svg" alt="" class="form__input--icon-error" />
                   <div class="form__select-dialog hide" id="select-dialog">

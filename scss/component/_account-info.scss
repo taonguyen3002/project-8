@@ -1,0 +1,31 @@
+@use "../abstracts";
+.account-info {
+  background: var(--account-info-bg);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  padding: 10px;
+  &__icon {
+    --account-info-icon-width: 54px;
+    width: var(--account-info-icon-width);
+    height: var(--account-info-icon-width);
+    border-radius: 8px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  &__title {
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 146.667%;
+    margin-bottom: 6px;
+  }
+  &__desc {
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 142.857%;
+  }
+}

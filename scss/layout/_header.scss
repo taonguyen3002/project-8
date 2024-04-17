@@ -218,11 +218,6 @@
     font-weight: 500;
     line-height: 146.667%;
   }
-  &__separate {
-    width: 1px;
-    height: 30px;
-    background: var(--bg-top-act-saparate);
-  }
   &__avatar {
     cursor: pointer;
     width: 50px;
@@ -288,11 +283,6 @@
     border-width: 1px 0;
     border-color: rgba(210, 209, 214, 1);
     border-style: solid;
-  }
-  &__separate {
-    background: rgba(210, 209, 214, 1);
-    height: 1px;
-    margin: 20px 0;
   }
   &__row {
     @extend .act-dropdown__top;

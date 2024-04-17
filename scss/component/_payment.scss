@@ -1,0 +1,97 @@
+.payment-card {
+  position: relative;
+  border-radius: 10px;
+  background: var(--payment-card-bg);
+  color: #fff;
+  z-index: 0;
+  min-height: 171px;
+  padding: 20px;
+  &__img {
+    position: absolute;
+    right: 8px;
+    top: 0;
+    z-index: -1;
+    pointer-events: none;
+  }
+  &__top {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 37px;
+  }
+  &__type {
+    font-weight: 1.4rem;
+    font-weight: 500;
+    line-height: 142.857%;
+  }
+  &__number {
+    font-size: 1.8rem;
+    line-height: 144.444%;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+  &__bottom {
+    display: flex;
+  }
+  &__label {
+    font-size: 0.8rem;
+    white-space: nowrap;
+    font-weight: 500;
+    line-height: 175%;
+  }
+  &__value {
+    white-space: nowrap;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 140%;
+  }
+  &__expired {
+    margin: 0 auto 0 40px;
+  }
+  &__circle {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 42px;
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+      display: block;
+      border-radius: 999px;
+      width: 28px;
+      height: 28px;
+      mix-blend-mode: hard-light;
+    }
+    &::before {
+      z-index: 1;
+      background: #f84444;
+      left: 0;
+    }
+    &::after {
+      background: #ffb700;
+      right: 0;
+    }
+  }
+}
+.new-card {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 14px;
+  justify-content: center;
+  min-height: 171px;
+  border-radius: 10px;
+  border: 1px dashed #d2d1d6;
+  &__text {
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 142.857%;
+    color: #d2d1d6;
+    transition: color 0.2s;
+  }
+  &:hover &__text {
+    color: initial;
+  }
+}

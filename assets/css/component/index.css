@@ -717,6 +717,17 @@
   line-height: 142.857%;
   margin-bottom: 10px;
 }
+.form__label--medium {
+  font-size: 1.8rem;
+  line-height: 1.4444;
+  margin-bottom: 20px;
+}
+@media (max-width: 767.98px) {
+  .form__label--medium {
+    font-size: 1.6rem;
+    line-height: 150%;
+  }
+}
 .form__input-text {
   padding: 8px 12px;
   width: 121px;
@@ -1266,14 +1277,134 @@
 .address-card__ctrl {
   height: 100%;
 }
-.address-card__btn-edit {
+
+.payment-card {
+  position: relative;
+  border-radius: 10px;
+  background: var(--payment-card-bg);
+  color: #fff;
+  z-index: 0;
+  min-height: 171px;
+  padding: 20px;
+}
+.payment-card__img {
+  position: absolute;
+  right: 8px;
+  top: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+.payment-card__top {
   display: flex;
   align-items: center;
-  font-weight: 400;
-  font-size: 1.8rem;
+  gap: 6px;
+  margin-bottom: 37px;
 }
-.address-card__btn-icon {
-  margin-right: 10px;
+.payment-card__type {
+  font-weight: 1.4rem;
+  font-weight: 500;
+  line-height: 142.857%;
+}
+.payment-card__number {
+  font-size: 1.8rem;
+  line-height: 144.444%;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.payment-card__bottom {
+  display: flex;
+}
+.payment-card__label {
+  font-size: 0.8rem;
+  white-space: nowrap;
+  font-weight: 500;
+  line-height: 175%;
+}
+.payment-card__value {
+  white-space: nowrap;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 140%;
+}
+.payment-card__expired {
+  margin: 0 auto 0 40px;
+}
+.payment-card__circle {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 42px;
+}
+.payment-card__circle::before, .payment-card__circle::after {
+  position: absolute;
+  content: "";
+  display: block;
+  border-radius: 999px;
+  width: 28px;
+  height: 28px;
+  mix-blend-mode: hard-light;
+}
+.payment-card__circle::before {
+  z-index: 1;
+  background: #f84444;
+  left: 0;
+}
+.payment-card__circle::after {
+  background: #ffb700;
+  right: 0;
+}
+
+.new-card {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 14px;
+  justify-content: center;
+  min-height: 171px;
+  border-radius: 10px;
+  border: 1px dashed #d2d1d6;
+}
+.new-card__text {
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 142.857%;
+  color: #d2d1d6;
+  transition: color 0.2s;
+}
+.new-card:hover .new-card__text {
+  color: initial;
+}
+
+.account-info {
+  background: var(--account-info-bg);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  padding: 10px;
+}
+.account-info__icon {
+  --account-info-icon-width: 54px;
+  width: var(--account-info-icon-width);
+  height: var(--account-info-icon-width);
+  border-radius: 8px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.account-info__title {
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 146.667%;
+  margin-bottom: 6px;
+}
+.account-info__desc {
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 142.857%;
 }
 
 /*# sourceMappingURL=index.css.map */

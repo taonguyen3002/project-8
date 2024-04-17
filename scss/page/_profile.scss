@@ -1,0 +1,98 @@
+@use "../abstracts";
+.profile {
+  &-page {
+    margin-bottom: 50px;
+  }
+  &-container {
+    margin-top: 30px;
+  }
+  &__sidebar {
+    background: var(--profile-sidebar-bg);
+    border-radius: 20px;
+    box-shadow: 0px 20px 60px 10px var(--profile-sidebar-boxshadow);
+    margin-bottom: 30px;
+  }
+}
+.profile-user {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #fff;
+  border-radius: 20px 20px 0 0;
+  margin-bottom: 30px;
+  background: linear-gradient(180deg, rgba(26, 22, 46, 0) 0%, #1a162e 100%),
+    url(../image/profile/cover.png) no-repeat center / cover;
+  padding: 40px 0 20px 0;
+  &__avatar {
+    width: var(--with-profile-avatar, 121px);
+    object-fit: cover;
+    height: var(--with-profile-avatar);
+    border-radius: 999px;
+    border: 5px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 4px 14px 2px rgba(0, 0, 0, 0.08);
+    margin-bottom: 17px;
+  }
+  &__name {
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 144.44%;
+  }
+  &__register-day {
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 146.67%;
+  }
+}
+.profile-menu {
+  padding: 0 30px 30px 30px;
+  border-radius: 0 0 20px 20px;
+  &__title {
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 144.444%;
+  }
+  &__item {
+    padding: 5px 0;
+    &:hover {
+      background: #ebebeb;
+    }
+  }
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 146.667%;
+  }
+  &__icon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: var(--profile-menu-icon-width, 24px);
+    height: var(--profile-menu-icon-width, 24px);
+  }
+}
+.favorite-item {
+  display: flex;
+  gap: 20px;
+  &__img {
+    width: 151px;
+    height: 108px;
+    object-fit: contain;
+  }
+  &__title {
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 146.667%;
+    margin-bottom: 10px;
+  }
+  &__bottom {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+}
