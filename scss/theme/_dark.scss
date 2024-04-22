@@ -22,6 +22,13 @@ html.dark {
     brightness(96%) contrast(86%);
   --filter-menuColumnIcon-color: brightness(0) saturate(100%) invert(98%) sepia(6%) saturate(1274%) hue-rotate(162deg)
     brightness(107%) contrast(96%);
+  // cart preview
+  --act-dropdown-bg: #2f3441;
+  --act-dropdown-shadow: rgba(23, 28, 40, 0.4);
+  --cart-preview-img-border: rgba(0, 0, 0, 0.05);
+  --act-dropdown-arrow-fillter: brightness(0) saturate(100%) invert(16%) sepia(11%) saturate(1324%) hue-rotate(185deg)
+    brightness(91%) contrast(83%);
+
   // sidebar
   --color-cateItemTitle: #fff;
   --bg-sidebarColor: #292e39;
@@ -72,10 +79,12 @@ html.dark {
   --checkout-gift-boxshadow: rgba(41, 46, 57, 1);
   --modal-bg: #3f4552;
   --modal-boxshadow: rgba(23, 28, 40, 0.4);
-
+  // payment
+  --checkout-payment-item-bg: #292e39;
   // profile
   --profile-sidebar-bg: #171c28;
   --profile-sidebar-boxshadow: rgba(23, 28, 40, 0.2);
   // account info
-  --account-info-bg: #b9babe;
+  --account-info-bg: #292e39;
+  --account-info-icon-bg: #171c28;
 }

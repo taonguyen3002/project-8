@@ -1,6 +1,7 @@
 @use "../abstracts";
 html {
   --bg-body: #f6f6f6;
+  --separate-bg: #d2d1d6;
   @include abstracts.screen(lg) {
     --bg-header-color: #fff;
     --boxShadow-header-color: rgba(237, 237, 246, 0.2);
@@ -74,6 +75,8 @@ html {
   --act-dropdown-bg: #fff;
   --act-dropdown-shadow: #c8c8c866;
   --cart-preview-img-border: rgba(0, 0, 0, 0.05);
+  --act-dropdown-arrow-fillter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(49deg)
+    brightness(103%) contrast(103%);
   // checkout
   --checkout-breadcrumb-bg: rgba(255, 255, 255, 1);
   --checkout-cart-info-bg: rgba(255, 255, 255, 1);
@@ -89,4 +92,5 @@ html {
   --profile-sidebar-boxshadow: rgba(237, 237, 246, 0.2);
   // account info
   --account-info-bg: #f6f6f6;
+  --account-info-icon-bg: #fff;
 }

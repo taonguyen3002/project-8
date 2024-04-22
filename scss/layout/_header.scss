@@ -226,6 +226,21 @@
     border-radius: 8px;
     display: block;
   }
+  &__user {
+    position: relative;
+    &:hover .act-dropdown {
+      display: flex;
+    }
+    .act-dropdown {
+      display: none;
+      top: 35px;
+      right: -12px;
+      width: min(300px, 100vw);
+    }
+    .act-dropdown__arrow-img {
+      right: 10px;
+    }
+  }
   &__sign-up {
     @include abstracts.screen(md) {
       height: 40px !important;
@@ -242,6 +257,9 @@
   padding-top: 40px;
   right: -60px;
   width: min(500px, 100vw);
+  &__arrow {
+    filter: var(--act-dropdown-arrow-fillter);
+  }
   &__arrow-img {
     width: 48.5px;
     position: absolute;
@@ -304,5 +322,39 @@
     &__checkout-btn {
       min-width: 278px;
     }
+  }
+}
+.user-menu {
+  &__top {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  &__avatar {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  &__name {
+    font-weight: 600;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+  &__link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 0;
+  }
+  &__icon {
+    width: 16px;
+  }
+  &__separate {
+    padding-top: 10px;
+    margin-top: 10px;
+    border-top: 1px solid var(--separate-bg);
   }
 }

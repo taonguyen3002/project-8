@@ -9,6 +9,9 @@
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
+    @include abstracts.screen(md) {
+      flex-direction: column;
+    }
     .form__group + .form__group {
       margin-top: 0;
     }

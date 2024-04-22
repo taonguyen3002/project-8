@@ -87,6 +87,9 @@
     margin-top: 30px;
   }
   &__heading {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     font-weight: 700;
     font-size: 2.4rem;
     line-height: calc(34 / 24);

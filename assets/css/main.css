@@ -200,7 +200,7 @@ select {
 .separate {
   margin: var(--margin, 30px) 0;
   height: 1px;
-  background: #d2d1d6;
+  background: var(--separate-bg);
 }
 
 .row > *, .container-fluid, .container {
@@ -1399,6 +1399,11 @@ html.dark {
     brightness(96%) contrast(86%);
   --filter-menuColumnIcon-color: brightness(0) saturate(100%) invert(98%) sepia(6%) saturate(1274%) hue-rotate(162deg)
     brightness(107%) contrast(96%);
+  --act-dropdown-bg: #2f3441;
+  --act-dropdown-shadow: rgba(23, 28, 40, 0.4);
+  --cart-preview-img-border: rgba(0, 0, 0, 0.05);
+  --act-dropdown-arrow-fillter: brightness(0) saturate(100%) invert(16%) sepia(11%) saturate(1324%) hue-rotate(185deg)
+    brightness(91%) contrast(83%);
   --color-cateItemTitle: #fff;
   --bg-sidebarColor: #292e39;
   --boxShadow-sidebar: rgba(23, 28, 40, 0.4);
@@ -1437,9 +1442,11 @@ html.dark {
   --checkout-gift-boxshadow: rgba(41, 46, 57, 1);
   --modal-bg: #3f4552;
   --modal-boxshadow: rgba(23, 28, 40, 0.4);
+  --checkout-payment-item-bg: #292e39;
   --profile-sidebar-bg: #171c28;
   --profile-sidebar-boxshadow: rgba(23, 28, 40, 0.2);
-  --account-info-bg: #b9babe;
+  --account-info-bg: #292e39;
+  --account-info-icon-bg: #171c28;
 }
 @media (max-width: 991.98px) {
   html.dark {
@@ -1455,6 +1462,7 @@ html.dark {
 
 html {
   --bg-body: #f6f6f6;
+  --separate-bg: #d2d1d6;
   --text-color: #1a162e;
   --icon-color: brightness(0) saturate(100%) invert(8%) sepia(18%) saturate(2011%) hue-rotate(210deg) brightness(94%)
     contrast(96%);
@@ -1498,6 +1506,8 @@ html {
   --act-dropdown-bg: #fff;
   --act-dropdown-shadow: #c8c8c866;
   --cart-preview-img-border: rgba(0, 0, 0, 0.05);
+  --act-dropdown-arrow-fillter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(49deg)
+    brightness(103%) contrast(103%);
   --checkout-breadcrumb-bg: rgba(255, 255, 255, 1);
   --checkout-cart-info-bg: rgba(255, 255, 255, 1);
   --checkout-cart-info-boxshadow: rgba(237, 237, 246, 0.2);
@@ -1509,6 +1519,7 @@ html {
   --profile-sidebar-bg: #fff;
   --profile-sidebar-boxshadow: rgba(237, 237, 246, 0.2);
   --account-info-bg: #f6f6f6;
+  --account-info-icon-bg: #fff;
 }
 @media (max-width: 991.98px) {
   html {
@@ -1800,6 +1811,21 @@ html {
   border-radius: 8px;
   display: block;
 }
+.top-act__user {
+  position: relative;
+}
+.top-act__user:hover .act-dropdown {
+  display: flex;
+}
+.top-act__user .act-dropdown {
+  display: none;
+  top: 35px;
+  right: -12px;
+  width: min(300px, 100vw);
+}
+.top-act__user .act-dropdown__arrow-img {
+  right: 10px;
+}
 @media (max-width: 767.98px) {
   .top-act__sign-up {
     height: 40px !important;
@@ -1816,6 +1842,9 @@ html {
   padding-top: 40px;
   right: -60px;
   width: min(500px, 100vw);
+}
+.act-dropdown__arrow {
+  filter: var(--act-dropdown-arrow-fillter);
 }
 .act-dropdown__arrow-img {
   width: 48.5px;
@@ -1876,6 +1905,39 @@ html {
 }
 .act-dropdown__checkout__checkout-btn {
   min-width: 278px;
+}
+
+.user-menu__top {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+.user-menu__avatar {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.user-menu__name {
+  font-weight: 600;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+.user-menu__link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 0;
+}
+.user-menu__icon {
+  width: 16px;
+}
+.user-menu__separate {
+  padding-top: 10px;
+  margin-top: 10px;
+  border-top: 1px solid var(--separate-bg);
 }
 
 .footer {
@@ -2554,6 +2616,11 @@ html {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
+}
+@media (max-width: 767.98px) {
+  .form__row {
+    flex-direction: column;
+  }
 }
 .form__row .form__group + .form__group {
   margin-top: 0;
@@ -3359,7 +3426,7 @@ html {
   width: var(--account-info-icon-width);
   height: var(--account-info-icon-width);
   border-radius: 8px;
-  background: #fff;
+  background: var(--account-info-icon-bg);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3865,6 +3932,9 @@ html {
   margin-top: 30px;
 }
 .cart-info__heading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   font-weight: 700;
   font-size: 2.4rem;
   line-height: 1.4166666667;
@@ -4272,6 +4342,16 @@ html {
   align-items: center;
   gap: 20px;
   flex-wrap: wrap;
+}
+
+.form-card__label {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+.form-card__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 /*# sourceMappingURL=main.css.map */
